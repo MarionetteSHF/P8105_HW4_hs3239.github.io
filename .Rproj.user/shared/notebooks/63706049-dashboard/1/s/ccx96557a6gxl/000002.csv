@@ -1,0 +1,8 @@
+"0","data(""rest_inspec"")"
+"0","rest_inspec ="
+"0","  rest_inspec %>%"
+"0","  mutate(boro = str_to_title(boro)) %>% "
+"0","  filter(grade %in% c(""A"", ""B"", ""C""), boro == ""Manhattan"") %>%"
+"0","  relocate(boro) %>% "
+"0","  sample_n(10000) %>% "
+"0","  view"
