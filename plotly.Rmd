@@ -30,5 +30,27 @@ rest_inspec =
 
 ### Chart A
 
+```{r scatterplot}
+rest_inspec %>%
+  mutate(text_label = str_c("Score: ", score, "\nGrade: ", grade)) %>% 
+  plot_ly(
+    x = ~inspection_date, y = ~score, type = "scatter", mode = "markers",
+    color = ~grade, text = ~text_label, alpha = 0.5)
+```
 
+### Chart B
+
+```{r boxplot}
+rest_inspec %>%
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box", colors = "viridis")
+```
+
+### Chart C
+
+```{r barchart}
+rest_inspec %>% 
+  count(cuisine_description) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  plot_ly(x = ~cuisine_description, y = ~n, color = ~cuisine_description, type = "bar", colors = "viridis", showlegend = FALSE)
+```
 
