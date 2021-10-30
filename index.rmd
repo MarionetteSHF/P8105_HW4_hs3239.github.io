@@ -4,4 +4,4 @@ title: "P8105: Homework 4"
 
 ### About this website
 
-This is the website that I have created for P8105, Homework #4. Here, you can find a page about me, and several graphs created using plotly and data from NYC restaurant inspections. 
+This is the website that I have created for P8105, Homework #4. The about page give more information about me, and several graphs created using plotly and data from NYC restaurant inspections. You can take a look at my resume, contact me with my email, go to my github webpage and build a connect with me on Linkedin.
